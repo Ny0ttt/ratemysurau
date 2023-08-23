@@ -18,8 +18,8 @@ const heresurauname = 'surau annamira';
 */
   export async function getScrapedGmapSurau( surauname:string ) {
   const browser = await playwright.chromium.launch({
-    // headless: false
-    headless: true
+    headless: false
+    // headless: true
   });
   // const context = await browser.newContext({
   //   proxy: { server: 'http://ProxyIP:Port' }
@@ -144,16 +144,23 @@ const heresurauname = 'surau annamira';
 
  async function saveImgFile(page: Page) {
 
-  // const img = page.locator('div.U39Pmb');
-  // const imgUrl = await img.getAttribute('style');
+  // await page.locator('div.U39Pmb').nth(5).click();
+  // await page.locator('div.U39Pmb').nth(10).click();
+  // await page.locator('div.U39Pmb').nth(15).click();
   //scroll to get all url. not sure how to get all count. cannot use directly locator i think
 
-  for (let i = 0; i < 20; i++) {
-    // for (let i = 0; i < await img.count(); i++) {
+  for (let f = 5; f < 20; f+=5) {
+    await page.locator('div.U39Pmb').nth(f).click();
+
+    for (let i = 0; i < 5; i++) {
+      
     const img = page.locator('div.U39Pmb').nth(i);
     const itemurl = await img.getAttribute('style');
     console.log(itemurl);
-  }
+    // console.log('i=' + i +'j='+ f );
+    };
+    
+  };
   console.log("Completed url scrap");
   // console.log(imgUrl);
   
