@@ -150,7 +150,7 @@ const heresurauname = 'surau annamira';
 
   for (let i = 0; i < 20; i++) {
     // for (let i = 0; i < await img.count(); i++) {
-    const img = await page.locator('div.U39Pmb').nth(i);
+    const img = page.locator('div.U39Pmb').nth(i);
     const itemurl = await img.getAttribute('style');
     console.log(itemurl);
   }
