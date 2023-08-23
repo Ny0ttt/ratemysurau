@@ -42,27 +42,12 @@ const heresurauname = 'surau annamira';
   await page.getByRole('button', { name: 'Photo of Surau An-Namira (Solat Jumaat)' }).click();
 
   await saveImgFile(page);
-
-
-  // await page.waitForSelector('div.m6QErb.DxyBCb.kA9KIf.dS8AEf');
-
- 
-
-
-  // console.log(items.count());
-
-  // await page.screenshot({ path: './tests/screenshot.png'});
   
   // let ListingPageData = await extractDetails(page);
   
   // let ListingPageDatastring = JSON.stringify(ListingPageData);
   // saveJSONFile(ListingPageDatastring);
 
- 
-
-
-
-  
    // Closing browser context after use
   //  await context.close();
   // await browser.close();
@@ -161,6 +146,7 @@ const heresurauname = 'surau annamira';
 
   // const img = page.locator('div.U39Pmb');
   // const imgUrl = await img.getAttribute('style');
+  //scroll to get all url. not sure how to get all count. cannot use directly locator i think
 
   for (let i = 0; i < 20; i++) {
     // for (let i = 0; i < await img.count(); i++) {
