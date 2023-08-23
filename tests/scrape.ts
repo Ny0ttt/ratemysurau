@@ -50,7 +50,7 @@ const heresurauname = 'surau annamira';
 
    // Closing browser context after use
   //  await context.close();
-  // await browser.close();
+  await browser.close();
 };
 
 /**
@@ -154,6 +154,7 @@ const heresurauname = 'surau annamira';
     const itemurl = await img.getAttribute('style');
     console.log(itemurl);
   }
+  console.log("Completed url scrap");
   
 
 };
