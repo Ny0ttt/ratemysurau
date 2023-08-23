@@ -18,8 +18,8 @@ const heresurauname = 'surau annamira';
 */
   export async function getScrapedGmapSurau( surauname:string ) {
   const browser = await playwright.chromium.launch({
-    headless: false
-    // headless: true
+    // headless: false
+    headless: true
   });
   // const context = await browser.newContext({
   //   proxy: { server: 'http://ProxyIP:Port' }
@@ -155,6 +155,7 @@ const heresurauname = 'surau annamira';
     console.log(itemurl);
   }
   console.log("Completed url scrap");
+  // console.log(imgUrl);
   
 
 };
