@@ -23,7 +23,7 @@
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
     "drizzle-seed": "",
-    "test-scrape": "tsx ./tests/scrape.ts"
+    "test-scrape": "tsx ./scripts/scrape.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts",
